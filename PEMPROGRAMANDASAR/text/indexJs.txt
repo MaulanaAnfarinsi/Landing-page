@@ -1,0 +1,41 @@
+<==================================================================================================================================================>
+JAVASCRIPT
+<==================================================================================================================================================>
+document.querySelector adalah metode dalam DOM (Document Object Model) API yang digunakan untuk memilih elemen pertama dalam dokumen HTML
+ yang cocok dengan selektor CSS yang diberikan.
+window.onscroll: Ini adalah event listener yang akan menjalankan fungsi yang diberikan setiap kali pengguna menggulir halaman.
+
+/* mengelola navigasi halaman saat pengguna menggulirnya. */
+sections.forEach(sec => { ... }): Fungsi ini akan mengulangi semua elemen dalam array sections. 
+sec mewakili setiap elemen dalam array tersebut.
+
+let top = window.scrollY;: Ini menyimpan posisi scroll vertikal saat ini (jumlah piksel yang sudah digulirkan dari atas halaman) 
+dalam variabel top.
+
+let offset = sec.offsetTop - 150;: Ini menyimpan posisi vertikal elemen sec relatif terhadap bagian atas halaman, 
+dikurangi 150 piksel. offsetTop adalah jarak antara elemen dengan bagian atas halaman.
+
+let height = sec.offsetHeight;: Ini menyimpan tinggi elemen sec.
+
+let id = sec.getAttribute("id");: Ini menyimpan nilai atribut id dari elemen sec.
+
+if (top >= offset && top < offset + height) { ... }: Ini adalah kondisi yang mengecek apakah posisi scroll berada dalam jangkauan elemen sec.
+ Jika posisi scroll lebih besar atau sama dengan offset dan kurang dari offset + height, maka kondisi ini benar.
+
+navLinks.forEach(links => { ... }): Jika kondisi di atas benar, fungsi ini akan mengulangi semua elemen dalam array navLinks. 
+links mewakili setiap elemen dalam array tersebut.
+
+links.classList.remove("active");: Menghapus kelas active dari setiap elemen navLinks untuk memastikan tidak ada elemen yang tetap aktif.
+
+document.querySelector("header nav a [href*=" + id + "]").classList.add("active");: Menambahkan kelas active pada elemen navigasi
+ yang href-nya mengandung id dari elemen sec yang sedang aktif.
+
+
+/* MENU ICON */
+menuIcon.onclick = () => { ... }: Ini menambahkan fungsi yang akan dijalankan setiap kali elemen menuIcon diklik.
+
+menuIcon.classList.toggle("bx-x");: Ini akan menambah atau menghapus kelas bx-x pada elemen menuIcon setiap kali elemen tersebut diklik.
+ Metode classList.toggle() sangat berguna untuk beralih (toggle) kelas CSS, sehingga Anda bisa mengubah tampilan elemen dengan mudah.
+
+navbar.classList.toggle("active");: Serupa dengan yang sebelumnya, tetapi kali ini menambah atau menghapus kelas active pada elemen navbar. 
+Dengan cara ini, Anda bisa mengontrol tampilan atau perilaku elemen navbar saat elemen menuIcon diklik.

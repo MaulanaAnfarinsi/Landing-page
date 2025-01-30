@@ -1,0 +1,178 @@
+<==================================================================================================================================================>
+html
+<==================================================================================================================================================>
+deklarasi elemen dasar
+<!DOCTYPE html>: Menyatakan bahwa dokumen ini adalah HTML5.
+<html lang="en">: Elemen root dari dokumen HTML, dengan atribut lang yang menunjukkan bahasa yang digunakan (dalam hal ini, bahasa Inggris).
+<head>: Bagian yang berisi metadata, termasuk pengaturan karakter, viewport untuk responsivitas, judul halaman, dan tautan ke stylesheet dan ikon.
+<link rel="stylesheet" href="style.css">: Menghubungkan file CSS eksternal untuk styling.
+<link href='...' rel='stylesheet'>: Menghubungkan ke pustaka ikon Boxicons untuk digunakan dalam halaman.
+
+Header
+<header>: Elemen yang berisi informasi tajuk halaman, termasuk logo dan navigasi.
+<a>: Tautan yang berfungsi sebagai logo, mengarah ke bagian "home".
+<i>: Elemen untuk ikon menu, menggunakan kelas dari Boxicons.
+<nav>: Elemen navigasi yang berisi tautan ke berbagai bagian halaman.
+
+Section (Bagian Utama)
+<section>: Menandai bagian utama dari halaman, di sini adalah bagian "home".
+<div class="home-img">: untuk gambar profil.
+<h1> dan <h3>: Judul dan subjudul yang memperkenalkan karakter.
+<p>: Deskripsi singkat tentang karakter.
+<div class="social-icons">:  untuk ikon media sosial.
+<a class="btn">: Tautan yang berfungsi sebagai tombol untuk menghubungi atau mempekerjakan.
+
+About (Bagian Tentang)
+<section>: Menandai bagian dari dokumen yang memiliki tema tertentu. Dalam hal ini, bagian "About".
+class="about": Memberikan kelas untuk styling CSS.
+id="about": Memberikan ID unik yang dapat digunakan untuk navigasi atau pengenalan elemen dalam JavaScript.
+
+<div class="about-content">:
+
+Kontainer untuk semua konten teks yang menjelaskan tentang karakter.
+<h2 class="heading">Tentang <span>Saya</span></h2>:
+
+<h2>: Judul utama untuk bagian ini.
+<span>: Elemen inline yang dapat digunakan untuk styling tambahan, di sini menekankan kata "Saya".
+<h3 class="text-animation">:
+
+<h3>: Subjudul yang mungkin digunakan untuk efek animasi (meskipun saat ini tidak ada teks di dalamnya).
+<span>: Elemen kosong yang mungkin digunakan untuk efek animasi atau styling di CSS.
+
+<a href="#" class="btn">Baca selengkapnya</a>:
+
+Tautan yang berfungsi sebagai tombol untuk mengarahkan pengguna ke informasi lebih lanjut.
+class="btn": Kelas ini biasanya digunakan untuk memberikan styling tombol.
+<div class="about-img">:
+
+Kontainer untuk gambar yang terkait dengan bagian "About".
+<img src="image.jpg" alt="">:
+
+Gambar yang ditampilkan di bagian ini.
+src="image.jpg": Menunjukkan lokasi gambar. Anda mungkin ingin mengganti "image.jpg" dengan nama file gambar yang sesuai.
+alt="": Atribut alternatif yang memberikan deskripsi gambar jika gambar tidak dapat ditampilkan. Sebaiknya diisi dengan deskripsi singkat tentang gambar untuk aksesibilitas.
+
+Project
+<section class="projects" id="projects">:
+
+<section>: Menandai bagian dari dokumen yang memiliki tema tertentu. Dalam hal ini, bagian "Projects".
+class="projects": Memberikan kelas untuk styling CSS.
+id="projects": Memberikan ID unik yang dapat digunakan untuk navigasi atau pengenalan elemen dalam JavaScript.
+<h2 class="heading">Projects</h2>:
+
+<h2>: Judul utama untuk bagian ini.
+class="heading": Kelas untuk styling judul.
+
+<div class="projects-container">:
+
+Kontainer untuk semua box proyek.
+<div class="projects-box">:
+
+Kontainer untuk setiap box proyek.
+<div class="projects-info">:
+
+Kontainer untuk informasi proyek, termasuk judul dan kutipan motivasi.
+<h4>:
+
+Judul untuk setiap proyek (seni bela diri).
+<p>:
+
+Paragraf yang berisi kutipan motivasi untuk setiap proyek.
+
+Contact
+<section class="contact" id="contact">:
+
+<section>: Menandai bagian dari dokumen yang memiliki tema tertentu. Dalam hal ini, bagian "Contact".
+class="contact": Memberikan kelas untuk styling CSS.
+id="contact": Memberikan ID unik yang dapat digunakan untuk navigasi atau pengenalan elemen dalam JavaScript.
+<h2 class="heading">Kontak <span>Saya</span></h2>:
+
+<h2>: Judul utama untuk bagian ini.
+<span>: Elemen inline yang dapat digunakan untuk styling tambahan, di sini menekankan kata "Saya".
+<form action="#">:
+
+<form>: Elemen yang digunakan untuk mengumpulkan input dari pengguna.
+action="#": Menentukan URL tempat data formulir akan dikirim. Dalam hal ini, menggunakan # berarti tidak ada pengiriman data yang sebenarnya (ini bisa diubah ke URL yang sesuai jika diperlukan).
+<div class="input-box">:
+
+Kontainer untuk sekelompok input.
+Input Fields:
+
+<input type="text" placeholder="Full Name">: Input untuk nama lengkap.
+<input type="email" placeholder="Email">: Input untuk alamat email.
+<input type="number" placeholder="Phone Number">: Input untuk nomor telepon.
+<input type="email" placeholder="Subject">: Input untuk subjek pesan. (Mungkin lebih baik menggunakan type="text" untuk subjek, karena subjek tidak selalu berupa email).
+
+<textarea>:
+<textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+Elemen untuk input teks yang lebih panjang, di sini digunakan untuk pesan dari pengguna.
+cols="30" dan rows="10": Menentukan ukuran area teks.
+placeholder="Your Message": Teks yang ditampilkan di dalam area teks sebelum pengguna mengetik.
+<input type="Submit" value="Send Message" class="btn">:
+
+Tombol untuk mengirimkan formulir.
+value="Send Message": Teks yang ditampilkan pada tombol.
+class="btn": Kelas ini biasanya digunakan untuk memberikan styling tombol.
+
+FOOTER
+<footer class="footer">:
+
+<footer>: Menandai bagian bawah dari dokumen yang biasanya berisi informasi tentang pemilik situs, hak cipta, dan tautan navigasi.
+class="footer": Memberikan kelas untuk styling CSS.
+<div class="social">:
+
+Kontainer untuk ikon media sosial.
+
+Ikon Media Sosial:
+<a href="#"><i class="bx bxl-linkedin-square"></i></a>
+<a href="#"><i class="bx bxl-facebook-square"></i></a>
+<a href="#"><i class="bx bxl-instagram-alt"></i></a>
+<a href="#"><i class="bx bxl-twitter"></i></a>
+Setiap tautan (<a>) mengarah ke media sosial yang berbeda. Saat ini, semua tautan menggunakan #, yang berarti tidak ada URL yang ditentukan. Anda dapat menggantinya dengan URL profil media sosial yang sesuai.
+<i>: Elemen ini digunakan untuk menampilkan ikon. Dalam hal ini, tampaknya Anda menggunakan pustaka ikon (seperti Boxicons) untuk menampilkan ikon media sosial.
+<ul class="list">:
+
+Daftar tidak terurut yang berisi tautan navigasi tambahan.
+<li>:
+
+Setiap item dalam daftar berisi tautan ke halaman lain di situs web.
+Tautan yang ada: FAQ, Services, About Me, Contact, dan Privacy Policy.
+<p class="copyright">:
+
+Paragraf yang berisi informasi hak cipta.
+Teks ini menunjukkan bahwa semua hak dilindungi dan mencantumkan nama pemilik (dalam hal ini, "BAKKI HANMA").
+
+<==================================================================================================================================================>
+1. Deklarasi DOCTYPE
+<!DOCTYPE html>
+Menunjukkan bahwa dokumen ini adalah dokumen HTML5. Ini penting untuk memastikan bahwa browser merender halaman dengan cara yang sesuai.
+2. Elemen Semantik
+Elemen semantik adalah elemen HTML yang memiliki makna tertentu dan memberikan konteks tentang isi di dalamnya. Dalam kode Anda, beberapa elemen semantik yang digunakan adalah:
+
+<header>: Menandai bagian atas halaman yang biasanya berisi logo, judul, dan navigasi.
+<nav>: Menandai bagian navigasi dari halaman, yang berisi tautan ke bagian lain dari situs.
+<section>: Menandai bagian terpisah dari konten, yang memiliki tema atau tujuan tertentu. Dalam kode Anda, ada beberapa bagian seperti "home", "about", "projects", "contact".
+<footer>: Menandai bagian bawah halaman yang biasanya berisi informasi hak cipta, tautan navigasi tambahan, dan informasi kontak.
+3. Elemen Non-Semantik
+Elemen non-semantik adalah elemen yang tidak memberikan informasi tentang isi di dalamnya. Contohnya:
+
+<div>: Digunakan untuk mengelompokkan konten tetapi tidak memberikan makna tambahan tentang konten tersebut.
+<span>: Digunakan untuk menandai bagian kecil dari teks tanpa memberikan makna semantik.
+4. Atribut
+class: Digunakan untuk memberikan kelas pada elemen, yang dapat digunakan untuk styling dengan CSS.
+id: Memberikan identifikasi unik untuk elemen, yang dapat digunakan untuk navigasi atau pengenalan elemen dalam JavaScript.
+placeholder: Menyediakan teks petunjuk dalam input yang hilang saat pengguna mulai mengetik.
+action: Menentukan URL tempat data formulir akan dikirim saat formulir disubmit.
+5. Tautan dan Ikon
+<a>: Elemen tautan yang digunakan untuk membuat hyperlink ke halaman lain atau bagian lain dari halaman.
+<i>: Digunakan untuk menampilkan ikon, dalam hal ini menggunakan pustaka ikon seperti Boxicons.
+6. Formulir
+<form>: Elemen yang digunakan untuk mengumpulkan input dari pengguna.
+<input>: Elemen untuk menerima input dari pengguna, dengan berbagai tipe seperti text, email, dan number.
+<textarea>: Elemen untuk menerima input teks yang lebih panjang.
+7. Penggunaan CSS dan JavaScript
+<link rel="stylesheet" href="style.css">: Menghubungkan file CSS eksternal untuk styling halaman.
+<script src="script.js"></script>: Menghubungkan file JavaScript eksternal untuk menambahkan interaktivitas pada halaman.
+8. Struktur Halaman
+Kode ini mengikuti struktur yang umum digunakan dalam halaman web, dengan bagian header, beberapa section untuk konten, dan footer di bagian bawah.
+<==================================================================================================================================================>

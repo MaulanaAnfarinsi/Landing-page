@@ -1,0 +1,236 @@
+<!-- DEKLARASI DAN ELEMEN DASAR -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <!-- HTML  merupakan bagian tajuk untuk situs web, termasuk logo, ikon menu, dan bilah navigasi dengan tautan.-->
+
+    <header class="header">
+        <a href="#home" class="logo">BAKI <!-- Logo untuk Situs Web -->
+            <span>HANMA</span></a>
+
+        <i class="class bx bx-menu" id="menu-icon"></i>
+        <!-- sebuah elemen ikon yang berfungsi sebagai tombol untuk membuka atau menutup menu navigasi.-->
+
+        <!-- membuat struktur navigasi untuk sebuah halaman web -->
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="about.html">Tentang</a>
+            <a href="project.html">Proyek</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- SECTION -->
+    <section class="home" id="home">
+
+        <!--  mendefinisikan sebuah div yang berfungsi sebagai wadah untuk gambar yang ditampilkan -->
+        <div class="home-img">
+            <img src="image.jpg" alt="">
+        </div>
+
+        <!-- Memperkenalkan Karakter BAKI HANMA yang di tampilkan di bagian home -->
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>Saya <span>BAKI HANMA</span></h1>
+            <h3 class="text-animation">
+                Saya seorang <span></span>
+            </h3>
+            <p>tokoh utama dalam seri anime dan manga "Baki the Grappler." Saya dikenal sebagai seorang
+                seniman bela diri yang sangat terampil dan berambisi untuk menjadi yang terkuat</p>
+
+            <!-- IKON MEDIA SOSIAL-->
+            <div class="social-icons">
+                <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+                <a href="#"><i class="bx bxl-facebook-square"></i></a>
+                <a href="https:www.instagram.com/lana0545"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+            </div>
+
+            <a href="https://www.netflix.com/id/title/80204451" class="btn">mempekerjakan saya</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <!-- tentang karakter, latar belakang dan motivasi. -->
+        <div class="about-content">
+            <h2 class="heading">Tentang <span>Saya</span></h2>
+            <h3 class="text-animation">
+                <span></span>
+            </h3>
+            <p>Saya adalah putra Yujiro Hanma dan Emi Akezawa. Saya memiliki hubungan yang rumit dengan ayahku, yang
+                merupakan sosok yang sangat kuat dan sering menjadi motivasi bagiku untuk menjadi lebih kuat.</p>
+            <a href="https://dafunda.com/otaku/anggota-keluarga-hanma-di-serial-baki/" class="btn">Baca selengkapnya</a>
+        </div>
+
+        <div class="about-img">
+            <img src="image.jpg" alt="">
+        </div>
+
+    </section>
+    <!-- ABOUT END -->
+
+    <!-- PROJECT -->
+    <section class="projects" id="projects">
+        <h2 class="heading">Projects</h2>
+    <div class="projects-container">
+        <div class="projects-box">
+            <div class="projects-info">
+                <h4>GULAT</h4>
+                <button class='show-video' onclick="toggleVideo('video1')">Lihat Video</button>
+                <p>"Hidup ini adalah pertarungan, dan hanya yang berani yang akan bertahan."</p>
+                <iframe id="video1" class="video-container" width="560" height="315"
+                    src="https://www.youtube.com/embed/k0KNU9UVSV4?si=FqKkMg2fcpXEsBfF" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <div class="projects-info">
+                <h4>MUAY THAI</h4>
+                <button class='show-video' onclick="toggleVideo('video2')">Lihat Video</button>
+                <p>"Setiap luka adalah pelajaran, dan setiap pelajaran membuat kita lebih kuat."</p>
+                <iframe id="video2" class="video-container" width="560" height="315"
+                    src="https://www.youtube.com/embed/PU7LvAQpZk0?si=Sv9AJv0lCbogqsgD" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <div class="projects-info">
+                <h4>KARATE</h4>
+                <button class='show-video' onclick="toggleVideo('video3')">Lihat Video</button>
+                <p>"Hanya dengan kematian seorang pejuang, dia bisa menemukan arti hidupnya."</p>
+                <iframe id="video3" class="video-container" width="560" height="315"
+                    src="https://www.youtube.com/embed/48POqJsCC2M?si=L6uD5glxS3AaqnTL" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <div class="projects-info">
+                <h4>KEMPO</h4>
+                <button class='show-video' onclick="toggleVideo('video4')">Lihat Video</button>
+                <p>"Jangan pernah meremehkan kekuatan semangat juang seseorang."</p>
+                <iframe id="video4" class="video-container" width="560" height="315"
+                    src="https://www.youtube.com/embed/gfk1oRVRmJk?si=VF_DUTCYwDuTJ25U" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <div class="projects-info">
+                <h4>JUDO</h4>
+                <button class='show-video' onclick="toggleVideo('video5')">Lihat Video</button>
+                <p>"Kekuatan bukan hanya tentang fisik, tetapi juga tentang mental dan tekad yang kuat."</p>
+                <iframe id="video5" class="video-container" width="560" height="315"
+                    src="https://www.youtube.com/embed/2lnNOP1YiA4?si=ZD6jvW7mTHcwiFN7" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+            </div>
+        </div>
+
+        <div class="projects-box">
+            <div class="projects-info">
+                <h4>MMA</h4>
+                <button class='show-video' onclick="toggleVideo('video6')">Lihat Video</button>
+                <p>"Tidak ada batasan bagi mereka yang bertekad."</p>
+                <iframe id="video6" class="video-container" width="560" height="315"
+                    src="https://www.youtube.com/embed/uEbheGCEti0?si=hPbRw01tDqeQbuHR" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display:none;"></iframe>
+
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- PROJECT END -->
+
+    <!-- CONTACT -->
+    <!-- Formulir Kontak untuk Mengirimkan informasi -->
+    <section class="contact" id="contact">
+        <h2 class="heading">SARAN</h2>
+        <div class="contact-container">
+            <div class="form-container">
+                <h3>kirim pesan kepada kami</h3>
+                <form action="" class="contact-form">
+                    <input type="email" name="" id="" placeholder="masukkan email Anda..." required>
+                    <input type="text" placeholder="masukkan nama anda" required>
+                    <input type="number" placeholder="masukkan nomor anda" required>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="tulis pesan di sini..."required></textarea>
+                    <input type="submit" value="mengirim" class="send-button">
+                </form>
+            </div>
+            <!-- MAP -->
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208004.9165150416!2d139.43024794992775!3d35.452892547609125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185becbbb66509%3A0x69683f660285400!2sYokohama%2C%20Prefektur%20Kanagawa%2C%20Jepang!5e0!3m2!1sid!2sid!4v1736430393790!5m2!1sid!2sid"
+                     style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT END -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <!-- IKON MEDIA SOSIAL -->
+        <div class="social">
+            <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+            <a href="#"><i class="bx bxl-facebook-square"></i></a>
+            <a href="https:www.instagram.com/lana0545"><i class="bx bxl-instagram-alt"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i>
+        </div>
+
+        <!-- halaman web yang berisi daftar tautan navigasi dan informasi hak cipta.-->
+        <ul class="list">
+            <li>
+                <a href="#">Pertanyaan umum</a>
+            </li>
+            <li>
+                <a href="#">Layanan</a>
+            </li>
+            <li>
+                <a href="#about.html">Tentang saya</a>
+            </li>
+            <li>
+                <a href="#contact.html">Kontak</a>
+            </li>
+            <li>
+                <a href="#">Kebijakan Privasi</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            @ BAKKI HANMA | All Rights Reserved
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

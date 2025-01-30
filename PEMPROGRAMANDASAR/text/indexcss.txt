@@ -1,0 +1,639 @@
+<==================================================================================================================================================>
+CSS
+<==================================================================================================================================================>
+Flexbox, atau Flexible Box Layout, adalah model tata letak CSS yang dirancang untuk 
+memperbaiki cara pengaturan elemen di halaman web ketika ukuran layar atau wadah berubah. 
+Flexbox sangat berguna untuk membuat tata letak yang responsif dan fleksibel.
+
+Komponen Flexbox
+Flex Container: Elemen yang menggunakan display flex atau inline-flex.
+ Ini adalah wadah utama yang mengandung elemen-elemen fleksibel (flex items).
+
+* { ... }
+
+Selektor universal * berarti aturan ini akan diterapkan ke semua elemen dalam dokumen HTML.
+
+margin: 0;
+
+Mengatur margin semua elemen menjadi 0, menghapus ruang kosong di sekitar elemen.
+
+padding: 0;
+
+Mengatur padding semua elemen menjadi 0, menghapus ruang kosong di dalam elemen antara konten dan batas elemen.
+
+box-sizing: border-box;
+
+Mengubah model kotak CSS sehingga ukuran elemen tidak termasuk padding dan border dalam lebar dan tinggi elemen. 
+
+text-decoration: none;
+
+Menghapus dekorasi teks (seperti garis bawah) dari semua elemen teks.
+
+border: none;
+
+Menghapus semua border dari elemen.
+
+outline: none;
+
+Menghapus outline, yang biasanya ditampilkan saat elemen fokus, seperti pada input form.
+
+scroll-behavior: smooth;
+
+Membuat pergerakan scroll menjadi halus, terutama ketika menggunakan link anchor atau metode scroll JavaScript.
+
+font-family: "Poppins", sans-serif;
+
+Mengatur semua teks dalam dokumen untuk menggunakan font "Poppins" sebagai font utama,
+ dan "sans-serif" sebagai font cadangan jika "Poppins" tidak tersedia.
+
+/*MENDEFINISIKAN WARNA DI HALAMAN WEB*/
+:root { ... }
+
+Pseudo-kelas :root mewakili elemen paling atas di dokumen HTML. 
+Menggunakan :root untuk mendefinisikan variabel memastikan bahwa variabel tersebut dapat diakses dari seluruh dokumen.
+
+--bg-color: #f9f9f9;
+
+Mendefinisikan variabel --bg-color dengan nilai warna latar belakang #f9f9f9 (abu-abu muda).
+
+--second-bg-color: #d2ffd1;
+
+Mendefinisikan variabel --second-bg-color dengan nilai warna latar belakang kedua #d2ffd1 (hijau muda).
+
+--text-color: black;
+
+Mendefinisikan variabel --text-color dengan nilai warna teks black (hitam).
+
+--main-color: #2E8B57;
+
+Mendefinisikan variabel --main-color dengan nilai warna utama #2E8B57 (hijau laut).
+
+/* MENGATUR PROPERTI DASAR PADA ELEMEN HTML*/
+font-size: 62.5%;:
+
+Properti ini mengatur ukuran font dasar pada elemen html menjadi 62.5% dari ukuran default browser (biasanya 16px). 
+Konversi ini sering digunakan karena 62.5% dari 16px adalah 10px. Dengan cara ini, 
+menggunakan satuan rem untuk membuat perhitungan ukuran lebih mudah. Misalnya, 1rem akan sama dengan 10px, 
+sehingga 1.5rem akan sama dengan 15px.
+
+overflow-x: hidden;:
+
+Properti ini mengatur agar konten yang meluap secara horizontal (konten yang melampaui lebar layar) 
+tidak ditampilkan dan tidak menghasilkan scrollbar horizontal. Ini mencegah halaman web menggulir secara horizontal, 
+menjaga tampilan tetap rapi dan fokus pada konten vertikal.
+
+/* MENGATUR GAYA DASAR UNTUK ELEMEN BODY*/
+background: var(--bg-color);:
+
+Properti background mengatur warna latar belakang elemen body menggunakan variabel CSS --bg-color. 
+Dalam contoh ini, variabel --bg-color didefinisikan sebagai #f9f9f9 dalam kode sebelumnya, 
+yang berarti warna latar belakang akan menjadi abu-abu muda.
+
+color: var(--text-color);:
+
+Properti color mengatur warna teks elemen body menggunakan variabel CSS --text-color. 
+Dalam contoh ini, variabel --text-color didefinisikan sebagai black, yang berarti warna teks akan menjadi hitam.
+
+/* HEADER */
+position: fixed;
+
+Menetapkan posisi header agar tetap di tempatnya saat halaman digulir (scroll).
+
+top: 0;
+
+Menempatkan header di bagian paling atas dari viewport.
+
+left: 0;
+
+Menempatkan header di bagian paling kiri dari viewport.
+
+width: 100%;
+
+Membuat header mencakup lebar penuh dari viewport.
+
+padding: 3rem 9%;
+
+Menambahkan padding 3rem di atas dan bawah, dan 9% di kiri dan kanan dari isi header.
+
+background: rgba(255, 255, 255, 0.3);
+
+Memberikan latar belakang putih semi-transparan untuk header, sehingga konten di belakang header akan sedikit terlihat.
+
+border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+Menambahkan garis batas bawah tipis dan semi-transparan pada header.
+
+backdrop-filter: blur(10px);
+
+Menerapkan efek buram pada konten di belakang header untuk menciptakan tampilan yang lebih halus.
+
+display: flex;
+
+Mengaktifkan tata letak flexbox untuk header, yang memudahkan dalam menyusun dan menyelaraskan elemen-elemen di dalamnya.
+
+justify-content: space-between;
+
+Mengatur jarak antar elemen anak di dalam header sehingga elemen pertama berada di sebelah kiri dan elemen terakhir berada di sebelah kanan.
+
+align-items: center;
+
+Memusatkan elemen-elemen di dalam header secara vertikal.
+
+z-index: 100;
+
+Mengatur susunan tumpukan header agar tampil di atas elemen lain di halaman yang memiliki z-index lebih rendah.
+
+/* SECTION */
+section { ... }
+
+min-height: 100vh;: Menetapkan tinggi minimum dari setiap section agar memenuhi seluruh tinggi viewport.
+
+padding: 10rem 9% 10rem;: Menambahkan padding 10rem di atas dan bawah, dan 9% di kiri dan kanan.
+
+.home { ... }
+
+display: flex;: Mengaktifkan tata letak flexbox.
+
+justify-content: center;: Menyusun elemen anak secara horizontal di tengah.
+
+align-items: center;: Menyusun elemen anak secara vertikal di tengah.
+
+flex-direction: column;: Mengatur arah elemen anak secara vertikal.
+
+gap: 1rem;: Menambahkan jarak 1rem antara elemen anak.
+
+.home-content { ... }
+
+display: flex;, align-items: center;, justify-content: center;, flex-direction: column;
+: Pengaturan flexbox untuk menyusun elemen anak secara kolom dan pusat secara vertikal dan horizontal.
+
+text-align: center;: Menyelaraskan teks di tengah.
+
+margin-top: 3rem;: Menambahkan margin atas 3rem.
+
+.home-content h3 { ... }
+
+font-size: 3rem;: Mengatur ukuran font menjadi 3rem.
+
+font-weight: 700;: Mengatur ketebalan font menjadi 700 (bold).
+
+span { color: var(--main-color); } dan .logo span { color: var(--main-color); }
+
+Mengatur warna teks elemen span dan span dalam logo menggunakan variabel --main-color.
+
+.home-content hB:nth-of-type(2) { ... }
+
+margin-bottom: 2rem;: Menambahkan margin bawah 2rem.
+
+font-size: 4.8rem;: Mengatur ukuran font menjadi 4.8rem.
+
+.home-content h1 { ... }
+
+font-size: 8rem;: Mengatur ukuran font menjadi 8rem.
+
+font-weight: 700;: Mengatur ketebalan font menjadi 700 (bold).
+
+line-height: 1;: Mengatur tinggi baris menjadi 1.
+
+.home-img { ... }
+
+border-radius: 50%;: Menetapkan radius border menjadi 50%, membuat elemen menjadi bulat.
+
+.home-img img { ... }
+
+position: relative;, top: 2rem;: Mengatur posisi relatif dan memindahkan elemen ke bawah 2rem.
+
+width: 16vw;: Mengatur lebar gambar menjadi 16% dari lebar viewport.
+
+border-radius: 50%;: Membuat gambar menjadi bulat.
+
+cursor: pointer;: Mengubah kursor menjadi pointer saat melintasi elemen.
+
+.home-content p { ... }
+
+font-size: 1.8rem;: Mengatur ukuran font menjadi 1.8rem.
+
+font-weight: 500;: Mengatur ketebalan font menjadi 500 (medium bold).
+
+width: 1000px;: Mengatur lebar paragraf menjadi 1000px.
+
+.social-icons a { ... }
+
+display: inline-flex;, justify-content: center;, align-items: center;: 
+Mengatur elemen flex dalam link agar pusat secara horizontal dan vertikal.
+
+width: 5rem;, height: 5rem;: Mengatur lebar dan tinggi elemen link.
+
+background: transparent;: Mengatur latar belakang menjadi transparan.
+
+border: 0.3rem solid var(--main-color);: Menambahkan border solid dengan warna --main-color.
+
+font-size: 3rem;: Mengatur ukuran font menjadi 3rem.
+
+border-radius: 50%;: Membuat link berbentuk bulat.
+
+color: var(--main-color);: Mengatur warna teks menggunakan --main-color.
+
+margin: 3rem 1.5rem 3rem 0;: Menambahkan margin sekitar link.
+
+transition: 0.3s ease;: Menambahkan transisi selama 0.3 detik.
+
+.social-icons a:hover { ... }
+
+color: white;, background-color: var(--main-color);: Mengatur warna teks menjadi putih dan latar belakang menjadi --main-color saat hover.
+
+transform: scale(1.3) translateY(-5px);: Memperbesar elemen dan memindahkannya ke atas 5px.
+
+.btn { ... }
+
+display: inline-block;, padding: 1rem 2.8rem;: Mengatur elemen tombol dengan padding.
+
+background: var(--main-color);: Mengatur latar belakang menggunakan --main-color.
+
+border-radius: 4rem;: Membuat sudut tombol menjadi bulat.
+
+font-size: 2rem;, color: white;: Mengatur ukuran font dan warna teks.
+
+border: 2px solid transparent;: Mengatur border menjadi transparan.
+
+letter-spacing: 0.1rem;, font-weight: 600;: Mengatur jarak antar huruf dan ketebalan font.
+
+transition: 0.3s ease;, cursor: pointer;: Menambahkan transisi dan mengubah kursor menjadi pointer.
+
+.btn:hover { ... }
+
+transform: scale(1.05);: Memperbesar tombol sedikit saat hover.
+
+background: var(--bg-color);, color: var(--main-color);: Mengubah latar belakang dan warna teks saat hover.
+
+border: 2px solid var(--main-color);: Menambahkan border saat hover.
+
+/*ANIMASI TEKS*/
+.text-animation
+font-size: 34px;: Mengatur ukuran font menjadi 34px.
+
+font-weight: 600;: Mengatur ketebalan font menjadi 600 (semi-bold).
+
+min-width: 280px;: Mengatur lebar minimum elemen menjadi 280px.
+
+.text-animation span
+position: relative;: Mengatur posisi relatif dari elemen span, 
+memungkinkan elemen pseudo (::before dan ::after) diposisikan relatif terhadap elemen span.
+
+.text-animation span::before
+content: "GULAT";: Menampilkan teks "GULAT" sebelum konten elemen span.
+
+color: var(--main-color);: Mengatur warna teks menggunakan variabel --main-color.
+
+animation: words 20s infinite;: Menerapkan animasi words yang berlangsung selama 20 detik dan berulang terus-menerus.
+
+.text-animation span::after
+content: "";: Tidak menampilkan konten apapun.
+
+background-color: var(--bg-color);: Mengatur warna latar belakang menggunakan variabel --bg-color.
+
+position: absolute;: Mengatur posisi absolut dari elemen pseudo.
+
+width: calc(100% + 8px);: Mengatur lebar elemen menjadi sedikit lebih besar dari elemen span.
+
+height: 100%;: Mengatur tinggi elemen menjadi sama dengan elemen span.
+
+border-left: 2px solid #f1f1f1;: Menambahkan garis vertikal di sebelah kiri elemen pseudo.
+
+right: -8px;: Memindahkan elemen pseudo ke kanan sebanyak 8px.
+
+animation: cursor 0.6s infinite, typing 20s steps(14) infinite;: Menerapkan animasi cursor dan typing.
+
+@keyframes cursor
+Mengubah warna garis vertikal (cursor) menjadi --main-color.
+
+@keyframes words
+Mengubah konten teks dari "MUAY THAI" ke "KARATE", "KEMPO", "JUDO", dan "MMA" dalam interval waktu tertentu, memberikan efek perubahan teks.
+
+@keyframes typing
+Mengubah lebar elemen pseudo (efek mengetik) secara bertahap, memberikan tampilan animasi teks yang terlihat seperti sedang diketik.
+
+/*ABOUT*/
+.about
+display: flex;: Mengaktifkan tata letak flexbox.
+
+justify-content: center;: Menyusun elemen anak secara horizontal di tengah.
+
+align-items: center;: Menyusun elemen anak secara vertikal di tengah.
+
+gap: 10rem;: Menambahkan jarak 10rem antara elemen anak.
+
+background: var(--second-bg-color);: Mengatur latar belakang menggunakan variabel --second-bg-color.
+
+color: black;: Mengatur warna teks menjadi hitam.
+
+.about-img
+border-radius: 50%;: Menetapkan radius border menjadi 50%, membuat elemen menjadi bulat.
+
+.about-img img
+position: relative;: Mengatur posisi relatif dari gambar.
+
+width: 30vw;: Mengatur lebar gambar menjadi 30% dari lebar viewport.
+
+border-radius: 50%;: Membuat gambar menjadi bulat.
+
+top: 1rem;: Memindahkan gambar ke bawah sebesar 1rem.
+
+cursor: pointer;: Mengubah kursor menjadi pointer saat gambar dilintasi.
+
+.about .btn
+margin-top: 2rem;: Menambahkan margin atas sebesar 2rem pada tombol.
+
+.heading
+text-align: center;: Menyelaraskan teks di tengah.
+
+font-size: 8rem;: Mengatur ukuran font menjadi 8rem.
+
+.about-content h2
+text-align: left;: Menyelaraskan teks ke kiri.
+
+line-height: 1.5;: Mengatur jarak antara baris teks menjadi 1.5.
+
+.about-content h3
+font-size: 2.6rem;: Mengatur ukuran font menjadi 2.6rem.
+
+.about-content p
+font-size: 1.6rem;: Mengatur ukuran font menjadi 1.6rem.
+
+margin: 2rem 0 rem;: Menambahkan margin 2rem di atas dan bawah.
+
+.about-content .text-animation span::before
+content: "GULAT";: Menampilkan teks "GULAT" sebelum konten elemen span.
+
+color: var(--main-color);: Mengatur warna teks menggunakan variabel --main-color.
+
+animation: words 20s infinite;: Menerapkan animasi words yang berlangsung selama 20 detik dan berulang terus-menerus.
+
+.about-content .text-animation span::after
+content: "";: Tidak menampilkan konten apapun.
+
+background-color: var(--bg-color);: Mengatur warna latar belakang menggunakan variabel --bg-color.
+
+position: absolute;: Mengatur posisi absolut dari elemen pseudo.
+
+width: calc(100% + 8px);: Mengatur lebar elemen menjadi sedikit lebih besar dari elemen span.
+
+height: 100%;: Mengatur tinggi elemen menjadi sama dengan elemen span.
+
+border-left: 2px solid #f1f1f1;: Menambahkan garis vertikal di sebelah kiri elemen pseudo.
+
+right: -8px;: Memindahkan elemen pseudo ke kanan sebanyak 8px.
+
+animation: cursor 0.6s infinite, typing 20s steps(14) infinite;: Menerapkan animasi cursor dan typing.
+
+::-webkit-scrollbar
+width: 15px;: Mengatur lebar scrollbar menjadi 15px.
+
+::-webkit-scrollbar-thumb
+background-color: var(--main-color);: Mengatur warna scrollbar thumb menggunakan variabel --main-color.
+
+::-webkit-scrollbar-track
+background-color: var(--bg-color);: Mengatur warna track scrollbar menggunakan variabel --bg-color.
+
+width: 50px;: Mengatur lebar track scrollbar menjadi 50px
+
+/*PROJECT*/
+.projects
+background: var(--bg-color);: Mengatur latar belakang elemen menggunakan variabel --bg-color.
+
+color: black;: Mengatur warna teks menjadi hitam.
+
+.projects h2
+margin-bottom: 5rem;: Menambahkan margin bawah sebesar 5rem.
+
+color: black;: Mengatur warna teks menjadi hitam.
+
+.projects-container
+display: grid;: Mengaktifkan tata letak grid.
+
+grid-template-columns: repeat(3, 1fr);: Membagi grid menjadi 3 kolom dengan lebar yang sama.
+
+align-items: center;: Menyusun elemen dalam grid secara vertikal di tengah.
+
+gap: 2rem;: Menambahkan jarak 2rem antara elemen grid.
+
+.projects-box
+border: 3px solid var(--main-color);: Menambahkan border dengan lebar 3px dan warna dari variabel --main-color.
+
+height: 300px;: Mengatur tinggi elemen menjadi 300px.
+
+border-radius: 1em;: Menambahkan radius border sebesar 1em, membuat sudut elemen menjadi bulat.
+
+cursor: pointer;: Mengubah kursor menjadi pointer saat melintasi elemen.
+
+transition: 0.3s ease;: Menambahkan transisi dengan durasi 0.3 detik.
+
+.projects-box:hover
+background: var(--main-color);: Mengatur latar belakang elemen menggunakan variabel --main-color saat hover.
+
+color: white;: Mengatur warna teks menjadi putih saat hover.
+
+transform: scale(1.03);: Memperbesar elemen sebesar 3% saat hover.
+
+.projects-box .projects-info
+display: flex;: Mengaktifkan tata letak flexbox.
+
+flex-direction: column;: Mengatur arah elemen anak secara vertikal.
+
+text-align: left;: Menyelaraskan teks ke kiri.
+
+justify-content: center;: Menyusun elemen anak secara vertikal di tengah.
+
+align-items: baseline;: Menyusun elemen anak dari garis dasar.
+
+padding: 5rem;: Menambahkan padding sebesar 5rem di sekitar konten.
+
+.projects-info h4
+font-size: 36px;: Mengatur ukuran font menjadi 36px.
+
+font-weight: 500;: Mengatur ketebalan font menjadi 500 (semi-bold).
+
+.projects-info p
+margin-top: 2rem;: Menambahkan margin atas sebesar 2rem.
+
+font-size: 20px;: Mengatur ukuran font menjadi 20px.
+
+font-weight: 400;: Mengatur ketebalan font menjadi 400 (normal).
+
+margin: auto;: Menambahkan margin otomatis agar elemen berada di tengah.
+
+/*CONTACT*/
+.contact 
+background-color: var(--second-bg-color);: Mengatur warna latar belakang elemen menggunakan variabel --second-bg-color.
+
+.contact h2
+margin-bottom: 3rem;: Menambahkan margin bawah sebesar 3rem.
+
+color: black;: Mengatur warna teks menjadi hitam.
+
+.contact form
+max-width: 70rem;: Mengatur lebar maksimum form menjadi 70rem.
+
+margin: 1rem auto;: Menambahkan margin 1rem di atas dan bawah, serta memusatkan form secara horizontal.
+
+text-align: center;: Menyelaraskan teks di tengah.
+
+margin-bottom: 3rem;: Menambahkan margin bawah sebesar 3rem.
+
+.contact form .input-box
+display: flex;: Mengaktifkan tata letak flexbox.
+
+justify-content: center;: Menyusun elemen anak secara horizontal di tengah.
+
+flex-wrap: wrap;: Membungkus elemen anak agar tidak melampaui batas kontainer.
+
+.contact form .input-box, .contact form textarea
+width: 100%;: Mengatur lebar elemen menjadi 100%.
+
+padding: 1.5rem;: Menambahkan padding 1.5rem di sekitar konten.
+
+font-size: 1.6rem;: Mengatur ukuran font menjadi 1.6rem.
+
+color: var(--text-color);: Mengatur warna teks menggunakan variabel --text-color.
+
+background-color: var(--bg-color);: Mengatur warna latar belakang menggunakan variabel --bg-color.
+
+border-radius: 0.8rem;: Membuat sudut elemen menjadi bulat dengan radius 0.8rem.
+
+border: 2px solid var(--main-color);: Menambahkan border dengan lebar 2px dan warna dari variabel --main-color.
+
+margin: 1rem 0;: Menambahkan margin 1rem di atas dan bawah.
+
+resize: none;: Mencegah pengguna untuk mengubah ukuran elemen textarea.
+
+.contact form .btn
+margin-top: 2rem;: Menambahkan margin atas sebesar 2rem pada tombol.
+
+/* FOOTER */
+.footer
+position: relative;: Mengatur posisi elemen footer secara relatif.
+
+bottom: 0;: Menempatkan footer di bagian bawah halaman.
+
+width: 100%;: Mengatur lebar footer agar mencakup seluruh lebar viewport.
+
+padding: 40px 0;: Menambahkan padding 40px di atas dan bawah.
+
+background-color: var(--main-color);: Mengatur warna latar belakang footer menggunakan variabel --main-color.
+
+.footer .social
+text-align: center;: Menyelaraskan teks di tengah.
+
+padding-bottom: 25px;: Menambahkan padding bawah sebesar 25px.
+
+color: white;: Mengatur warna teks menjadi putih.
+
+.footer .social a
+font-size: 25px;: Mengatur ukuran font menjadi 25px.
+
+color: white;: Mengatur warna teks menjadi putih.
+
+border: 2px solid white;: Menambahkan border dengan lebar 2px dan warna putih.
+
+width: 42px;, height: 42px;: Mengatur lebar dan tinggi elemen menjadi 42px.
+
+line-height: 42px;: Menetapkan tinggi garis sebesar 42px untuk memastikan teks berada di tengah secara vertikal.
+
+display: inline-block;: Mengatur elemen menjadi blok sebaris.
+
+text-align: center;: Menyelaraskan teks di tengah.
+
+border-radius: 50%;: Membuat elemen berbentuk bulat.
+
+margin: 0 10px;: Menambahkan margin horizontal 10px di kiri dan kanan.
+
+transition: 0.3s ease;: Menambahkan transisi dengan durasi 0.3 detik.
+
+.footer .social a:hover
+transform: scale(1.2) translateY(-10px);: Memperbesar elemen sebesar 20% dan memindahkannya ke atas 10px saat hover.
+
+background-color: white;: Mengubah warna latar belakang menjadi putih saat hover.
+
+color: var(--main-color);: Mengubah warna teks menjadi --main-color saat hover.
+
+.footer ul
+margin-top: 0;: Mengatur margin atas menjadi 0.
+
+padding: 0;: Mengatur padding menjadi 0.
+
+font-size: 18px;: Mengatur ukuran font menjadi 18px.
+
+line-height: 1.6;: Mengatur tinggi baris menjadi 1.6.
+
+margin-bottom: 0;: Mengatur margin bawah menjadi 0.
+
+text-align: center;: Menyelaraskan teks di tengah.
+
+.footer ul li a
+color: white;: Mengatur warna teks menjadi putih.
+
+border-bottom: 3px solid transparent;: Menambahkan border bawah dengan lebar 3px dan warna transparan.
+
+transition: 0.3s ease;: Menambahkan transisi dengan durasi 0.3 detik.
+
+.footer ul li a:hover
+border-bottom: 3px solid white;: Mengubah warna border bawah menjadi putih saat hover.
+
+.footer ul li
+display: inline-block;: Mengatur elemen menjadi blok sebaris.
+
+padding: 0 15px;: Menambahkan padding horizontal sebesar 15px di kiri dan kanan.
+
+.footer .copyright
+margin-top: 50px;: Menambahkan margin atas sebesar 50px.
+
+text-align: center;: Menyelaraskan teks di tengah.
+
+font-size: 16px;: Mengatur ukuran font menjadi 16px.
+
+color: white;: Mengatur warna teks menjadi putih.
+
+/*  RESPONSIVE  */
+@media(max-width:1285px)
+html { font-size: 55%; }: Mengatur ukuran font dasar pada elemen html menjadi 55% dari ukuran default.
+
+.projects-container { ... }: Mengatur padding bawah menjadi 7rem, membagi grid menjadi 2 kolom dengan lebar yang sama, dan menambahkan margin 0.5rem di sekitar kontainer.
+
+.home img { width: 32vw; }: Mengatur lebar gambar dalam elemen .home menjadi 32% dari lebar viewport.
+
+@media(max-width:991px)
+.header { padding: 2rem 3%; }: Menambahkan padding 2rem di atas dan bawah, serta 3% di kiri dan kanan pada elemen header.
+
+section { padding: 10rem 3% 2rem; }: Menambahkan padding 10rem di atas, 3% di kiri dan kanan, dan 2rem di bawah pada elemen section.
+
+.footer { padding: 2rem 3%; }: Menambahkan padding 2rem di atas dan bawah, serta 3% di kiri dan kanan pada elemen footer.
+
+@media(max-width:895px)
+#menu-icon { display: block; }: Menampilkan elemen dengan id menu-icon.
+
+.navbar { ... }: Mengatur posisi navbar menjadi absolut, mengatur lebar penuh, 
+menambahkan padding, mengatur latar belakang menjadi putih, dan menyembunyikan navbar secara default.
+
+.navbar.active { display: block; }: Menampilkan navbar ketika kelas active ditambahkan.
+
+.navbar a { ... }: Mengatur gaya tautan dalam navbar, termasuk ukuran font, margin, dan warna teks.
+
+.home { flex-direction: column; margin: 5rem 4rem; }: Mengatur arah elemen anak dalam home secara vertikal dan menambahkan margin.
+
+.home p { width: 500px; }: Mengatur lebar paragraf dalam home menjadi 500px.
+
+.home-content h3 { font-size: 2.6rem; }: Mengatur ukuran font dari elemen h3 dalam home-content menjadi 2.6rem.
+
+.home-content h1 { font-size: 5rem; }: Mengatur ukuran font dari elemen h1 dalam home-content menjadi 5rem.
+
+.home-img img { ... }: Mengatur lebar gambar dalam home-img, menambahkan margin atas dan bawah.
+
+.about { flex-direction: column-reverse; }: Mengatur arah elemen anak dalam about secara kolom terbalik.
+
+.about-content { margin: 0 2rem 4rem; }: Menambahkan margin pada about-content.
+
+.about img { ... }: Mengatur lebar dan margin gambar dalam about.
+
+.projects h2 { margin-bottom: 3rem; }: Menambahkan margin bawah pada elemen h2 dalam projects.
+
+.projects-container { grid-template-columns: repeat(1, 1fr); }: Mengatur grid menjadi satu kolom dengan lebar yang sama.
